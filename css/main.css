@@ -1,0 +1,149 @@
+html,
+body {
+    margin: 0;
+    padding: 0em;
+    position: relative;
+    background-color: #fff;
+    color: #444;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden !important;
+    vertical-align: baseline;
+}
+
+.container {
+    padding-top: 2em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2em;
+    color: #000;
+    font-weight: 500;
+            font-style: italic;
+
+}
+
+p,
+h3,
+h4,
+a {
+    line-height: 1.6em;
+    font-size: 1.5em;
+    font-family: 'Cormorant Garamond', serif;
+    text-decoration: none;
+}
+
+p a {
+    font-size: 100%;
+    cursor: pointer;
+    color: inherit;
+}
+
+.info {
+    font-size: 0.8em;
+}
+
+.project {
+    max-width: 100% !important;
+    margin: 2.5em 0;
+}
+
+strong {
+    font-weight: 500;
+}
+
+footer p {
+    color: #656565;
+    letter-spacing: 0.50px;
+    font-size: 1em;
+    font-weight: 100;
+    margin: 0;
+}
+
+footer p a {
+    font-size: inherit;
+    color: inherit;
+}
+
+footer {
+    margin: 2.5em 0 5em 0;
+    padding: 5em 0 0 0;
+    border-top: 1px solid #f1f1f1;
+}
+
+
+/* UNDERLINE JS */
+
+.underline {
+    position: relative;
+}
+
+.underline span {
+    pointer-events: none;
+}
+
+.underline canvas {
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    cursor: pointer;
+}
+
+
+/* FOR MOBILE > TABLET*/
+
+@media (min-width: 500px) {
+    h1 {
+        font-size: 5em;
+        font-weight: 500;
+    }
+    .info p{
+      font-size: 3em;
+    }
+    p,
+    h3,
+    h4,
+    a {
+        line-height: 1.6em;
+        font-size: 2.5em;
+        font-family: 'Cormorant Garamond', serif;
+        text-decoration: none;
+    }
+}
+
+
+/* FOR TABLET > DESKTOP*/
+
+@media (min-width: 800px) {
+  .container{
+    padding-top: 2em;
+    width: 60%;
+    margin: 0 auto;
+  }
+    h1 {
+        font-size: 5em;
+        color: #000;
+        font-weight: 500;
+    }
+        .info p{
+      font-size: 2.5em;
+    }
+    p,
+    h3,
+    h4,
+    a {
+        line-height: 1.6em;
+        font-size: 3em;
+        font-family: 'Cormorant Garamond', serif;
+        text-decoration: none;
+    }
+}

@@ -1,88 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="google-site-verification" content="USwUxRALH0iI1MzWlixlyCTqxETEwuqEgMsTWX5IeIU" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Phil Sherwin-Nicholls - Visual Design, UX &amp; Code</title>
-        
-        <link rel="icon" type="image/png" href="favicon.png"/>
-        
-        <meta name="description" content="I am a digital product designer, website, bristol, london, winchester">
-        <link rel="stylesheet" href="main.css">
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'>
-    </head>
-    <body>
-        <div class="wrapper">
-            <p>Hey,</p>
-            <h2>I'm Phil.<br> Designer&nbsp;&amp;&nbsp;Creative</h2>
-            <p><strong>Currently:</strong> <a target="_blank" href="https://decoded.com/en-gb/">Decoded</a>&nbsp;&nbsp;&nbsp;&nbsp; <strong>Previously:</strong> <a href="http://joylab.co.uk" target="_blank" >Joylab</a><br><br> <strong>Clients:</strong> Amnesty International, BBC, 38 Degrees, Whitechapel Gallery, Philips, Xexec, Shelter, Very.co.uk, IRC Rescue</p>
-            <p>Let's chat — <a href="mailto:psherwinnicholls@gmail.com">psherwinnicholls@gmail.com</a></p>
+
+<head>
+    <title>Phil&ndash;SN &mdash; Product Designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,500,500i" rel="stylesheet">
+    <script src="js/classie.js"></script>
+    <script src="js/baseline.js"></script>
+    <script src="js/underline.js"></script>
+    <script src="js/GuitarString.js"></script>
+    <script src="js/multiple.js"></script>
+    <script src="js/SingleUnderline.js"></script>
+    <script src="js/MultipleUnderline.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Philip Sherwin&ndash;Nicholls</h1>
+        <div class="info">
+            <p><strong>Currently:</strong> <a class="underline" target="_blank" href="https://www.decoded.com">Decoded</a> &amp; <a class="underline" target="_blank" href="mailto:psherwinnicholls@gmail.com">Freelance</a>.
+                <br><strong>Previously:</strong> <a class="underline" target="_blank" href="https://www.joylab.co.uk">Joylab</a>.</p>
         </div>
-        <div id="container"></div>
-        <!--
-        <section class="instagram">
-        <ul class="instagram-lite"></ul>
-    </section> -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sketch.js/1.0/sketch.min.js"></script>    <script>
-    var COLOURS = [ '#9CAFD8', '#A7EBCA', '#F7CAC9', '#034F84', '#868E80' ];
-    var radius = 7;
-    Sketch.create({
-    container: document.getElementById( 'container' ),
-    autoclear: false,
-    setup: function() {
-    console.log( 'setup' );
-    },
-    update: function() {
-    radius = 2 + abs( sin( this.millis * 0.003 ) * 50 );
-    },
-    // Event handlers
-    keydown: function() {
-    if ( this.keys.C ) this.clear();
-    },
-    // Mouse & touch events are merged, so handling touch events by default
-    // and powering sketches using the touches array is recommended for easy
-    // scalability. If you only need to handle the mouse / desktop browsers,
-    // use the 0th touch element and you get wider device support for free.
-    touchmove: function() {
-    for ( var i = this.touches.length - 1, touch; i >= 0; i-- ) {
-    touch = this.touches[i];
-    this.lineCap = 'round';
-    this.lineJoin = 'round';
-    this.fillStyle = this.strokeStyle = COLOURS[ i % COLOURS.length ];
-    this.lineWidth = radius;
-    this.beginPath();
-    this.moveTo( touch.ox, touch.oy );
-    this.lineTo( touch.x, touch.y );
-    this.stroke();
-    }
-    }
-    });
-    
-    </script>
-    
+        <p class="project"><a class="underline" target="_blank" href="https://hacksy.decoded.com/">Hacksy</a> &mdash; Teaching people how to be secure online by showing them how to hack.</p>
+        <p class="project"><a class="underline" target="_blank" href="//www.walworthgarden.org.uk">Walworth Garden</a> &mdash; Website and identity for a London based aggrecultural charity.</p>
+        <p class="project"><a class="underline" target="_blank" href="https://whitechapelgallery.org">Whitechapel Gallery</a> &mdash; UX &amp; Visual design for the gallery.</p>
+        <p class="project"><a class="underline" target="_blank" href="https://amlea.org/en/">Amnesty International</a> &mdash; End to end encrypted file transfer service for human rights activists.</p>
+        <p class="project"><a class="underline" target="_blank" href="https://amlea.org/en/">Dexter</a> &mdash; iOS Pokedex app.</p>
+        <footer>
+            <p>
+                <strong>E-mail:</strong>
+                <a target="_blank" href="#" class="underline">hey@philsn.co.uk</a>
+            </p>
+            <p>
+                <strong>Instagram:</strong>
+                <a target="_blank" href="https://www.instagram.com/phils_n/" class="underline">@phils_n</a>
+            </p>
+            <p>
+                <strong>Twitter:</strong>
+                <a target="_blank" href="https://twitter.com/phils_n" class="underline">@phils_n</a>
+            </p>
+            <p>
+                <strong>Github:</strong>
+                <a target="_blank" href="https://github.com/psherwinnicholls" class="underline">psherwinnicholls</a>
+            </p>
+            <br>
+            <p>Made using
+                <a target="_blank" class="underline" href="https://fonts.google.com/">Google Fonts</a> &amp;
+                <a target="_blank" href="underlinejs.org" class="underline">underline.js</a>
+            </p>
+        </footer>
+    </div>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-41930398-1', 'auto');
     ga('send', 'pageview');
     </script>
-    
-    
     <!-- Hotjar Tracking Code for http://philsn.co.uk -->
     <script>
-    (function(h,o,t,j,a,r){
-    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-    h._hjSettings={hjid:118031,hjsv:5};
-    a=o.getElementsByTagName('head')[0];
-    r=o.createElement('script');r.async=1;
-    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-    a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    (function(h, o, t, j, a, r) {
+        h.hj = h.hj || function() {
+            (h.hj.q = h.hj.q || []).push(arguments)
+        };
+        h._hjSettings = {
+            hjid: 118031,
+            hjsv: 5
+        };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-    
 </body>
+
 </html>
