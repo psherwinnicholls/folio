@@ -1,149 +1,31 @@
-html,
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:500');
+
 body {
+    font-family: 'Work Sans', sans-serif;
     margin: 0;
-    padding: 0em;
-    position: relative;
-    background-color: #fff;
-    color: #444;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    overflow-x: hidden !important;
-    vertical-align: baseline;
+    padding: 0;
+    font-size:100%;
+    line-height:1.125; /* 16×1.125=18 */
 }
-
-.container {
-    padding-top: 2em;
-    width: 80%;
-    margin: 0 auto;
+h1,h2,h3,h4,h5{
+	opacity: 0.8;
 }
-
-h1 {
-    font-size: 2em;
-    color: #000;
-    font-weight: 500;
-            font-style: italic;
-
-}
-
-p,
-h3,
-h4,
-a {
-    line-height: 1.6em;
-    font-size: 1.5em;
-    font-family: 'Cormorant Garamond', serif;
+h1 { font-size: 3.998em;  /* 16x2.25=36 */ }
+h2 { font-size: 2.827em;   /* 16x1.5=24 */ }
+h3 { font-size: 1.999em; /* 16x1.125=18 */ }
+h4 { font-size: 1.3em; /* 16x0.875=14 */ }
+p  { font-size: 1.3em;  /* 16x0.75=12 */ }
+ a {
+ 	cursor:pointer;
+    color: inherit;
     text-decoration: none;
+    text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+    box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #000;
+      transition: all 0.8s ease;
+
 }
 
-p a {
-    font-size: 100%;
-    cursor: pointer;
-    color: inherit;
-}
-
-.info {
-    font-size: 0.8em;
-}
-
-.project {
-    max-width: 100% !important;
-    margin: 2.5em 0;
-}
-
-strong {
-    font-weight: 500;
-}
-
-footer p {
-    color: #656565;
-    letter-spacing: 0.50px;
-    font-size: 1em;
-    font-weight: 100;
-    margin: 0;
-}
-
-footer p a {
-    font-size: inherit;
-    color: inherit;
-}
-
-footer {
-    margin: 2.5em 0 5em 0;
-    padding: 5em 0 0 0;
-    border-top: 1px solid coral;
-}
-
-
-/* UNDERLINE JS */
-
-.underline {
-    position: relative;
-}
-
-.underline span {
-    pointer-events: none;
-}
-
-.underline canvas {
-    pointer-events: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    cursor: pointer;
-}
-
-
-/* FOR MOBILE > TABLET*/
-
-@media (min-width: 500px) {
-    h1 {
-        font-size: 5em;
-        font-weight: 500;
-    }
-    .info p{
-      font-size: 3em;
-    }
-    p,
-    h3,
-    h4,
-    a {
-        line-height: 1.6em;
-        font-size: 2.5em;
-        font-family: 'Cormorant Garamond', serif;
-        text-decoration: none;
-    }
-}
-
-
-/* FOR TABLET > DESKTOP*/
-
-@media (min-width: 800px) {
-  .container{
-    padding-top: 2em;
-    width: 60%;
-    margin: 0 auto;
-  }
-    h1 {
-        font-size: 5em;
-        color: #000;
-        font-weight: 500;
-    }
-        .info p{
-      font-size: 2.5em;
-    }
-    p,
-    h3,
-    h4,
-    a {
-        line-height: 1.6em;
-        font-size: 3em;
-        font-family: 'Cormorant Garamond', serif;
-        text-decoration: none;
-    }
+ a:hover {
+    color:blue;    
+    box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #00f;
 }
