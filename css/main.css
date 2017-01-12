@@ -7,7 +7,7 @@
 :root {
     --bg-color: #444a9e;
     --text-color: #fff;
-    --link-hover-color: #f77924;
+    --link-hover-color: #f7eb37;
     --xs: 0.8em;
     --s: 1em;
     --m: 1.3em;
@@ -21,10 +21,15 @@ body {
     margin: 0;
     padding: 0;
     font-size: 100%;
-    line-height: 1.125;
+    line-height: 1.2;
     color: var(--text-color);
     text-rendering: optimizeLegibility;
     background: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-variant-ligatures: common-ligatures;
+
+
     /* 16×1.125=18 */
 }
 
@@ -61,7 +66,8 @@ p {
 small {
     font-weight: 300;
     letter-spacing: 0.15em;
-    font-size: var(--s);
+    opacity: 0.8;
+    font-size: var(--xs);
 }
 
 a.header {
@@ -124,7 +130,6 @@ body:last-child {
 
 @media screen and (max-width: 480px) {
      :root {
-        --xs: 0.8em;
         --s: 1.15em;
         --m: 1.15em;
         --l: 1.3em;
@@ -137,9 +142,6 @@ body:last-child {
         -moz-column-count: 1;
         /* Firefox */
         column-count: 1;
-    }
-    small {
-        font-size: var(--xs);
     }
     section {
         padding-top: var(--l);
