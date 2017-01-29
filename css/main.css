@@ -7,7 +7,7 @@
 :root {
     --bg-color: #444a9e;
     --text-color: #fff;
-    --link-hover-color: #f7eb37;
+    --link-hover-color: #f05442;
     --xs: 0.8em;
     --s: 1em;
     --m: 1.3em;
@@ -28,8 +28,6 @@ body {
     -webkit-font-smoothing: antialiased;
     font-variant-ligatures: common-ligatures;
     -webkit-font-variant-ligatures: common-ligatures;
-
-
     /* 16×1.125=18 */
 }
 
@@ -84,12 +82,25 @@ a {
     text-decoration: none;
     /* add magic underline */
     text-shadow: 0.03em 0.06em 0 var(--bg-color), -0.03em 0.06em var(--bg-color), 0.01em 0 0 var(--bg-color), -0.01em 0 0 var(--bg-color);
-    box-shadow: inset 0 -0.06em 0 0 var(--text-color);
+    /*box-shadow: inset 0 -0.06em 0 0 var(--text-color);*/
+    background-image: linear-gradient(to bottom, transparent 48%, var(--text-color) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 90%;
 }
 
 a:hover {
+    transition: all 0.8s ease;
     color: var(--link-hover-color);
-    box-shadow: inset 0 -0.06em 0 0 var(--link-hover-color);
+    background-image: linear-gradient(to bottom, transparent 48%, var(--link-hover-color) 50%);
+    /*box-shadow: inset 0 -0.06em 0 0 var(--link-hover-color);*/
+}
+
+.external {
+    height: 14px;
+    width: 14px;
+    margin-left: 14px;
+    display: inline;
 }
 
 .subheader {
