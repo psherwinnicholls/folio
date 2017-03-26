@@ -25,10 +25,12 @@ body {
     color: var(--text-color);
     text-rendering: optimizeLegibility;
     background: var(--bg-color);
+    background-image: url('../bg.gif');
+    background-blend-mode:exclusion;
+    background-size: cover;
     -webkit-font-smoothing: antialiased;
     font-variant-ligatures: common-ligatures;
     -webkit-font-variant-ligatures: common-ligatures;
-    /* 16×1.125=18 */
 }
 
 h1, h2, h3, h4, h5, p {
@@ -48,6 +50,7 @@ h2 {
 
 h3 {
     font-size: var(--l);
+    margin-top: var(--l);
     /* 16x1.125=18 */
 }
 
@@ -92,7 +95,7 @@ a {
 a:hover {
     transition: all 0.8s ease;
     color: var(--link-hover-color);
-    background-image: linear-gradient(to bottom, transparent 48%, var(--link-hover-color) 50%);
+    background-image: linear-gradient(to bottom, transparent 49%, var(--link-hover-color) 50%);
     /*box-shadow: inset 0 -0.06em 0 0 var(--link-hover-color);*/
 }
 
