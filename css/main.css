@@ -7,7 +7,7 @@
 :root {
     --bg-color: #444a9e;
     --text-color: #fff;
-    --link-hover-color: #f05442;
+    --link-hover-color: #fff;
     --xs: 0.8em;
     --s: 1em;
     --m: 1.3em;
@@ -86,7 +86,7 @@ a {
     /* add magic underline */
     text-shadow: 0.03em 0.06em 0 var(--bg-color), -0.03em 0.06em var(--bg-color), 0.01em 0 0 var(--bg-color), -0.01em 0 0 var(--bg-color);
     /*box-shadow: inset 0 -0.06em 0 0 var(--text-color);*/
-    background-image: linear-gradient(to bottom, transparent 48%, var(--text-color) 50%);
+    background-image: linear-gradient(to bottom, transparent 50%, var(--link-hover-color) 100%);
     background-repeat: repeat-x;
     background-size: 2px 2px;
     background-position: 0 90%;
@@ -95,7 +95,7 @@ a {
 a:hover {
     transition: all 0.8s ease;
     color: var(--link-hover-color);
-    background-image: linear-gradient(to bottom, transparent 49%, var(--link-hover-color) 50%);
+    background-image: linear-gradient(to bottom, transparent 48%, var(--link-hover-color) 50%);
     /*box-shadow: inset 0 -0.06em 0 0 var(--link-hover-color);*/
 }
 
