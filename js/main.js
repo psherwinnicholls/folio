@@ -1,13 +1,10 @@
 var COLOURS = ["#9CAFD8", "#A7EBCA", "#F7CAC9", "#034F84", "#868E80"];
 var radius = 7;
+var container = document.getElementById("container")
 
 Sketch.create({
-  container: document.getElementById("container"),
+  container: container,
   autoclear: false,
-
-  setup: function() {
-    console.log("setup");
-  },
 
   update: function() {
     radius = 2 + abs(sin(this.millis * 0.003) * 50);
@@ -39,15 +36,3 @@ Sketch.create({
     }
   }
 });
-
-var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-
-var i = 1;
-
-window.setInterval(function(){
-  document.body.style.backgroundColor = colors[i];
-  i++;
-  if (i === colors.length){
-    i=0;
-  }
-}, 2000);

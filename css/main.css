@@ -66,11 +66,7 @@ main {
   position: fixed;
   max-height: 100%;
   max-width: 100%;
-}
-
-h1 {
-  font-size: var(--xxl);
-  /* 16x2.25=36 */
+  filter: blur(10px);
 }
 
 h2 {
@@ -78,20 +74,8 @@ h2 {
   font-weight: 700;
   pointer-events: none;
   margin: 0 auto;
-
-  /* 16x1.5=24 */
 }
 
-h3 {
-  font-size: var(--l);
-  /* 16x1.125=18 */
-  margin-bottom: 0;
-}
-
-h4 {
-  font-size: var(--m);
-  /* 16x0.875=14 */
-}
 
 p {
   font-size: var(--s);
@@ -109,7 +93,7 @@ p {
 }
 
 #wrapper{
-  max-width:400px
+  max-width:400px;
   display: block;
   margin:var(--l) 0;
 }
@@ -118,23 +102,17 @@ strong {
   font-weight: 700;
 }
 
-small {
-  font-weight: 300;
-  font-size: var(--xs);
-}
-
-a.header {
-  -webkit-margin-before: var(--s);
-  -webkit-margin-after: var(--s);
-  margin-top: var(--s);
-}
-
 a {
   color: var(--text-color);
   background-image: linear-gradient( 180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 85%, #fff 85%, #fff 90%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0));
   text-decoration: none;
   pointer-events: all;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+a:hover{
+  background-image: linear-gradient( 180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 85%, #fff 85%, #fff 90%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0));
 }
 
 @media screen and (max-width: 480px)  {
