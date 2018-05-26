@@ -75,7 +75,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--xl);
+  font-size: var(--l);
   font-weight: 700;
   pointer-events: none;
   margin: 0 auto;
@@ -99,17 +99,18 @@ p {
   font-weight: 200;
   margin-top: 2em;
   font-weight: 400;
-  width:60%;
+  width:45%;
+  min-width:300px;
   margin:0 auto;
 }
 
 .divider{
-  width:100%;
   display: block;
   margin:var(--s) 0;
 }
-.bigdivider{
-  width:100%;
+
+#wrapper{
+  max-width:400px
   display: block;
   margin:var(--l) 0;
 }
