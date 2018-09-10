@@ -9,16 +9,24 @@
   <meta name="theme-color" content="#F7786B">
   <link rel="icon" type="image/png" sizes="any" href="favicon.png" />
   <!-- Hotjar Tracking Code for http://philsn.co.uk -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:118031,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+  <script>
+    (function(h, o, t, j, a, r) {
+      h.hj =
+        h.hj ||
+        function() {
+          (h.hj.q = h.hj.q || []).push(arguments);
+        };
+      h._hjSettings = {
+        hjid: 118031,
+        hjsv: 6
+      };
+      a = o.getElementsByTagName("head")[0];
+      r = o.createElement("script");
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+  </script>
 </head>
 
 <body>
@@ -36,6 +44,9 @@
       <div class="content">
         <p><a href="https://www.linkedin.com/in/philsn/" target="_blank">LinkedIn</a>&emsp;hey@philsn.co.uk</p>
       </div>
+      <div class="content">
+        <div class="divider"></div>
+        <small>P.S. Refresh the page.</small></div>
     </section>
     <svg id="svg">
     </svg>
@@ -47,10 +58,13 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41930398-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'UA-41930398-1');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-41930398-1");
   </script>
 
 </body>
