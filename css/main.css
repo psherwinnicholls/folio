@@ -5,10 +5,10 @@
 /*DEFINE GLOBALS*/
 
 :root {
-  --bg-color: #F7786B;
-  --text-color: rgba(255, 255, 255, 1);
+  --bg-color: #000;
   --link-hover-color: #000;
   --line-height: 1.2;
+  --text-color: rgba(255, 255, 255, 1);
   --xs: 0.8em;
   --s: 1em;
   --m: 1.3em;
@@ -23,8 +23,6 @@ body {
   padding: 0;
   font-size: 20px;
   line-height: var(--line-height);
-  color: var(--text-color);
-  background: var(--bg-color);
   /* Make the type as beautiful as possible */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -32,42 +30,62 @@ body {
   -webkit-font-variant-ligatures: common-ligatures;
 }
 
-main {
-  display: flex;
+.hero{
+  background: var(--bg-color);
+  height: 100vh;
+  width: 100%;
+  display:flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.content{
+  text-align: center;
+  z-index: 100;
+}
+
+a.content{
+  text-decoration: none;
+  font-variant: small-caps;
+  letter-spacing: 0.2em;
+  background: none;
+  z-index: 100;
+}
+
+a.content:hover{
+  text-decoration: none;
+  font-variant: small-caps;
+  letter-spacing: 0.2em;
+  background: none;
+}
+
+svg{
   height: 100%;
-  width:100%;
+  width: 100%;
   position: absolute;
-  text-align: center;
-  pointer-events: none;
-}
-
-.wrapper {
-  pointer-events: none;
-  color: #FFF;
-  text-align: center;
-  height: auto;
-  margin: 0 auto;
-}
-
-#container {
-  position: fixed;
-  z-index: -300;
-  max-width: 100%;
-  max-height: 100%;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
-.sketch {
-  position: fixed;
-  max-height: 100%;
-  max-width: 100%;
-  filter: blur(10px);
+svg > path{
+  fill:none;
+  stroke:grey;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  fill: #ffffff00;
+  animate: dash 2s ease-in-out alternate;
 }
+
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      /* stroke-dashoffset: 200; */
+    }
+  }
+
 
 h2 {
   font-size: var(--l);
@@ -75,7 +93,6 @@ h2 {
   pointer-events: none;
   margin: 0 auto;
 }
-
 
 p {
   font-size: var(--s);
@@ -92,7 +109,7 @@ p {
   margin:var(--s) 0;
 }
 
-#wrapper{
+#hero{
   max-width:400px;
   display: block;
   margin:var(--l) 0;
@@ -106,9 +123,9 @@ a {
   color: var(--text-color);
   background-image: linear-gradient( 180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 85%, #fff 85%, #fff 90%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0));
   text-decoration: none;
-  pointer-events: all;
   cursor: pointer;
   transition: all 0.5s ease;
+  font-size: var(--s);
 }
 
 a:hover{

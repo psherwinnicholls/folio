@@ -1,38 +1,55 @@
-var COLOURS = ["#9CAFD8", "#A7EBCA", "#F7CAC9", "#034F84", "#868E80"];
-var radius = 7;
-var container = document.getElementById("container")
+var two = new Two({
+  fullscreen: true
+}).appendTo(document.body);
 
-Sketch.create({
-  container: container,
-  autoclear: false,
+var length = 64;
+var width = 250;
+var height = 50;
 
-  update: function() {
-    radius = 2 + abs(sin(this.millis * 0.003) * 50);
-  },
+let count = Math.PI * 100;
+let t = 0;
+var a = 400;
+var b = 200;
+var c = 17;
+var d = 100;
+var δ = (Math.random() * Math.PI) / 2;
 
-  // Event handlers
+var points = [];
 
-  keydown: function() {
-    if (this.keys.C) this.clear();
-  },
+for (var i = 0; i < count; i += 10) {
+  var pct = i / (length - 1);
+  y = 200 + a * Math.sin(c * i);
+  x = 200 + b * Math.cos(d * i);
 
-  // Mouse & touch events are merged, so handling touch events by default
-  // and powering sketches using the touches array is recommended for easy
-  // scalability. If you only need to handle the mouse / desktop browsers,
-  // use the 0th touch element and you get wider device support for free.
-  touchmove: function() {
-    for (var i = this.touches.length - 1, touch; i >= 0; i--) {
-      touch = this.touches[i];
+  points.push(new Two.Anchor(x, y));
+}
 
-      this.lineCap = "round";
-      this.lineJoin = "round";
-      this.fillStyle = this.strokeStyle = COLOURS[i % COLOURS.length];
-      this.lineWidth = radius;
+var wave = two.makeCurve(points, true);
+wave.translation.set(two.width / 2, two.height / 4);
+wave.noFill();
+var linearGradient = two.makeLinearGradient(
+  two.width,
+  -two.height,
+  two.width,
+  two.height,
+  new Two.Stop(0, "rgb(0,255,255)"),
+  new Two.Stop(1, "rgb(255,0,0)")
+);
+wave.stroke = linearGradient;
+wave.linewidth = 0.5;
+wave.cap = "round";
 
-      this.beginPath();
-      this.moveTo(touch.ox, touch.oy);
-      this.lineTo(touch.x, touch.y);
-      this.stroke();
-    }
+two.update(); // Generate the SVG elements
+
+two.bind("update", function(frameCount) {
+  var vertices = wave.vertices;
+  for (var i = 0; i < vertices.length; i++) {
+    var offset = frameCount / 20;
+    var v = vertices[i];
+    var pct = i / (vertices.length - 1);
+    y = 200 + a * Math.sin((c * (i + frameCount / 10000)) / δ);
+    x = 200 + b * Math.cos((d * (i / frameCount / 10000)) / δ);
+    v.y = y;
   }
 });
+two.play();
