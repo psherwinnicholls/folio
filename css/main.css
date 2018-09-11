@@ -144,7 +144,6 @@ a:hover{
 }
 @media screen and (max-width: 480px)  {
   :root {
-    --bg-color: #F7786B;
     --text-color: rgba(255, 255, 255, 1);
     --link-hover-color: #000;
     --line-height: 1.2;
