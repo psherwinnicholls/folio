@@ -12,7 +12,7 @@ html, *, not[h1]{
 }
 
 h1, svg > text > textPath {
-  line-height: calc(1.2em);
+  line-height: 1.2em;
   font-family: 'DM Serif Display', serif;
   font-size: 3.5em;
 }
@@ -22,11 +22,11 @@ h2, h3 {
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 ul {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 a{
@@ -236,7 +236,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -251,7 +250,6 @@ html {
 }
 body {
   /* color: hsla(0, 0%, 0%, 0.8); */
-  font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -637,21 +635,5 @@ pre tt:after {
   content: "";
 }
 @media only screen and (max-width: 480px) {
-  h1{
-    font-size: 1.3em;
-  }
-   p.lead, p.lead > a  {
-    font-size: 1em;
-  }
-
-  h3{
-    font-size: 1.3em;
-  }
-
-  ul {
-    margin-left: 1.75rem ;
-  }
-  li > a, li > span, li > p, li{
-    font-size: 1rem;
-  }
+  font-size: 100%;
 }

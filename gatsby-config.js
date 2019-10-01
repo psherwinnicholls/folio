@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/folio",
   siteMetadata: {
     title: `Phil Sherwin-Nicholls`,
-    description: `Currently contracting for the Department for Education. Previously at Decoded &amp; Joylab`,
+    description: `Service designer & digital technologist`,
     author: `@phils_n`,
     siteUrl: `https://philsn.co.uk`
   },
