@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet"
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
@@ -14,6 +15,11 @@ export default ({ data }) => {
   }
   return (
       <Layout>
+        <Helmet>
+           <meta charSet="utf-8" />
+           <title>Phil Sherwin-Nicholls | Service designer & digital technologist</title>
+           <link rel="canonical" href="http://philsn.co.uk" />
+         </Helmet>
         <SEO title="Home" />
         <section>
 
@@ -25,42 +31,37 @@ export default ({ data }) => {
             Blurring the lines between technology, data and design to solve wicked, population scale problems. He has the ability to create pixel perfect designs as well as zooming out to 30,000 feet to get a holistic viewpoint.
           </p>
           <p className="lead cta">
-            <a target="_blank" href="mailto:hey@philsn.co.uk">Available for contracts</a> from mid-October.
+            <a rel="noreopener noreferrer" target="_blank" href="mailto:hey@philsn.co.uk">Available for contracts</a> from mid-October.
           </p>
         </section>
 
         <section
           style={{
-            margin: "4em 0 2em 0"
+            margin: "3em 0"
           }}
         >
           <h3>Experience</h3>
           <div>
-            {data.allMarkdownRemark.edges.filter(edge => !!edge.node.frontmatter.date).map(({ node }) => (
-              <div key={node.id}>
-                {node.frontmatter.type === "experience" ? (
-                  <ul>
-                    <li>
+          <ul>
+            {data.allMarkdownRemark.edges.filter(edge => !!edge.node.frontmatter.date).map(({ node }) => {
+              if(node.frontmatter.type === "experience"){
+              return (
+                    <li  key={node.id}>
                       {node.frontmatter.client}
                       <br />
-                      <span
-                        style={{
-                          fontWeight: 300
-                        }}
-                      >
+                      <span>
                         {node.frontmatter.role}
                       </span>
                       <p>{node.frontmatter.excerpt}</p>
                     </li>
-                  </ul>
-                ) : (
-                  ""
-                )}
-              </div>
-            ))}
+                )
+              }
+            }
+            )}
+            </ul>
           </div>
         </section>
-        <section style={{margin: "4em 0"}}>
+        <section style={{margin: "1.5em 0"}}>
           <h3>Talks &amp; workshops</h3>
           <div>
             {data.allMarkdownRemark.edges.map(({ node }) => {
@@ -104,9 +105,6 @@ export const query = graphql`
             role
             date
             type
-          }
-          fields {
-            slug
           }
           excerpt
         }

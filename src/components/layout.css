@@ -637,7 +637,21 @@ pre tt:after {
   content: "";
 }
 @media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
+  h1{
+    font-size: 1.3em;
+  }
+   p.lead, p.lead > a  {
+    font-size: 1em;
+  }
+
+  h3{
+    font-size: 1.3em;
+  }
+
+  ul {
+    margin-left: 1.75rem ;
+  }
+  li > a, li > span, li > p, li{
+    font-size: 1rem;
   }
 }
