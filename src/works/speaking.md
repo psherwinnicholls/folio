@@ -1,0 +1,10 @@
+---
+type: "speaking"
+---
+- 2 day innovation workshops for European lottery
+- Design accelerator for Fidelity investments  
+- Innovation programmes for ING Europe and Philips
+- Cyber security masterclasses for McKinsey & Aviva
+- Innovation masterclasses for: Visa, ING, Philips, PVH,  Decoded, Society Generale
+- Data masterclasses for: Burberry, Marks & Spencer, Estée Lauder, RBC
+- Digital masterclass for BEIS, WorldPay, Topshop
