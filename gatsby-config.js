@@ -8,17 +8,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Phil Sherwin-Nicholls`,
-        short_name: `Phil.`,
-        start_url: `/`,
-        background_color: `#1c1c1b`,
-        theme_color: `#1c1c1b`,
-        display: `standalone`,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
