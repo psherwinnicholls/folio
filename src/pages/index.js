@@ -7,13 +7,6 @@ import SEO from "../components/seo";
 
 export default ({ data }) => {
 
-  const flex = {
-    display: "flex",
-    flexDirection: "row",
-    width: "100%",
-    flexWrap: "wrap"
-  }
-
   return (
       <Layout>
         <Helmet>
@@ -32,21 +25,15 @@ export default ({ data }) => {
         </section>
 
         <section>
-          <h3>Experience</h3>
-            <ul>
-              {data.allMarkdownRemark.edges
-              .filter(({node}) => node.frontmatter.type === 'experience')
-              .map(( {node} ) => (
-                <li key={node.id}>
-                  {node.frontmatter.client}
-                  <br />
-                  <span>
-                    {node.frontmatter.role}
-                  </span>
-                  <p>{node.frontmatter.excerpt}</p>
-                </li>
-              ))}
-            </ul>
+          <h3>Work &amp; clients</h3>
+          {data.allMarkdownRemark.edges
+          .filter(({node}) => node.frontmatter.type === 'clients')
+          .map(( {node} ) => (
+            <div
+              key={node.id}
+              dangerouslySetInnerHTML={{ __html: node.html }}>
+            </div>
+          ))}
         </section>
         <section>
           <h3>Talks &amp; workshops</h3>
@@ -56,7 +43,6 @@ export default ({ data }) => {
             .map(( {node} ) => (
               <div
                 key={node.id}
-                style={flex}
                 dangerouslySetInnerHTML={{ __html: node.html }}>
               </div>
             ))}
@@ -85,12 +71,8 @@ export const query = graphql`
           id
           html
           frontmatter {
-            client
-            role
-            date
             type
           }
-          excerpt
         }
       }
     }
