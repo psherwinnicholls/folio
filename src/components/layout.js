@@ -6,7 +6,6 @@
  */
 
 import React from "react"
-import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -34,10 +33,6 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <Helmet>
-            <meta charSet="utf-8" />
-            <meta name="theme-color" content="#1c1c1b" />
-          </Helmet>
           <Navigation/>
           <main>{children}</main>
         </div>
