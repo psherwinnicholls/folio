@@ -1,18 +1,19 @@
 import React from "react";
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-
 export default ({ data }) => {
+
   const flex = {
     display: "flex",
     flexDirection: "row",
     width: "100%",
     flexWrap: "wrap"
   }
+
   return (
       <Layout>
         <Helmet>
@@ -22,13 +23,9 @@ export default ({ data }) => {
          </Helmet>
         <SEO title="Home" />
         <section>
-
           <h1>Phil Sherwin-Nicholls&#59;<br/> a service designer<br/>&amp; digital technologist.</h1>
           <p className="lead">
-             He has worked with the UK Government, healthtechs, fintechs and global technology providers. He speaks about automation, digital transformation, innovation and user centred design.
-          </p>
-          <p className="lead">
-            Blurring the lines between technology, data and design to solve wicked, population scale problems. He has the ability to create pixel perfect designs as well as zooming out to 30,000 feet to get a holistic viewpoint.
+            Working at the intersection of technology, data and design. Phil works with organisations to  solve wicked, population scale problems.
           </p>
           <p className="lead cta">
             <a rel="noreopener noreferrer" target="_blank" href="mailto:hey@philsn.co.uk">Available for contracts</a> from mid-October.

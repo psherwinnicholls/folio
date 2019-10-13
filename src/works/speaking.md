@@ -1,6 +1,7 @@
 ---
 type: "speaking"
 ---
+- [2 day rapid prototyping intensive course](/coaching)
 - 2 day innovation workshops for European lottery
 - Design accelerator for Fidelity investments  
 - Innovation programmes for ING Europe and Philips

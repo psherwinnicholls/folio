@@ -13,12 +13,15 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-favicon`,
     `gatsby-plugin-robots-txt`,
     `gatsby-transformer-remark`,
-    // `gatsby-transformer-sharp`,
-    // `gatsby-plugin-sharp`,
-    // `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-svgr`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

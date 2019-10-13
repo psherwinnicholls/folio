@@ -1,4 +1,10 @@
 var plugins = [{
+      plugin: require('/Users/phil/dev/sites/folio/node_modules/gatsby-plugin-favicon/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('/Users/phil/dev/sites/folio/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/phil/dev/sites/folio/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     }]
