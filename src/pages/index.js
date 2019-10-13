@@ -33,53 +33,45 @@ export default ({ data }) => {
 
         <section>
           <h3>Experience</h3>
-          <div>
-          <ul>
-            {data.allMarkdownRemark.edges.filter(edge => !!edge.node.frontmatter.date).map(({ node }) => {
-              if(node.frontmatter.type === "experience"){
-              return (
-                    <li  key={node.id}>
-                      {node.frontmatter.client}
-                      <br />
-                      <span>
-                        {node.frontmatter.role}
-                      </span>
-                      <p>{node.frontmatter.excerpt}</p>
-                    </li>
-                )
-              }
-            }
-            )}
+            <ul>
+              {data.allMarkdownRemark.edges
+              .filter(({node}) => node.frontmatter.type === 'experience')
+              .map(( {node} ) => (
+                <li key={node.id}>
+                  {node.frontmatter.client}
+                  <br />
+                  <span>
+                    {node.frontmatter.role}
+                  </span>
+                  <p>{node.frontmatter.excerpt}</p>
+                </li>
+              ))}
             </ul>
-          </div>
         </section>
         <section>
           <h3>Talks &amp; workshops</h3>
           <div>
-            {data.allMarkdownRemark.edges.map(({ node }) => {
-              if(node.frontmatter.type === "speaking"){
-                return (
-                  <div
-                    key={node.id}
-                    style={flex}
-                    dangerouslySetInnerHTML={{ __html: node.html }}>
-                  </div>
-                )}
-            })}
-          </div>
-        </section>
-        <section>
-          <h3>Links</h3>
-          {data.allMarkdownRemark.edges.map(( {node} ) => {
-            if (node.frontmatter.type === "links") {
-              return (
+          {data.allMarkdownRemark.edges
+            .filter(({node}) => node.frontmatter.type === 'speaking')
+            .map(( {node} ) => (
               <div
                 key={node.id}
                 style={flex}
                 dangerouslySetInnerHTML={{ __html: node.html }}>
               </div>
-            )}
-          })}
+            ))}
+          </div>
+        </section>
+        <section>
+          <h3>Links</h3>
+          {data.allMarkdownRemark.edges
+            .filter(({node}) => node.frontmatter.type === 'links')
+            .map(( {node} ) => (
+              <div
+                key={node.id}
+                dangerouslySetInnerHTML={{ __html: node.html }}>
+              </div>
+            ))}
         </section>
       </Layout>
   );
