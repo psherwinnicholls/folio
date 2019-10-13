@@ -27,7 +27,7 @@ export default ({ data }) => {
             Working at the intersection of technology, data and design. Phil works with organisations to  solve wicked, population scale problems.
           </p>
           <p className="lead cta">
-            <a rel="noreopener noreferrer" target="_blank" href="mailto:hey@philsn.co.uk">Available for contracts</a> from mid-October.
+            <a href="mailto:hey@philsn.co.uk">Available for contracts</a> from mid-October.
           </p>
         </section>
 

@@ -17,9 +17,10 @@ module.exports = {
     `gatsby-plugin-favicon`,
     `gatsby-plugin-robots-txt`,
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
+    // `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-svgr`,
 

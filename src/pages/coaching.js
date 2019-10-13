@@ -21,7 +21,7 @@ export default () => {
             Learn to empower yourself and others around you by visualising your ideas as fully functioning prototypes hosted on the internet.
           </p>
           <p className="lead cta">
-            <a rel="noreopener noreferrer" target="_blank" href="mailto:hey@philsn.co.uk">
+            <a href="mailto:hey@philsn.co.uk">
               Get in touch
              for dates &amp; prices</a>
           </p>
