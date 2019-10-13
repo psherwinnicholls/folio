@@ -28,9 +28,8 @@ h3 {
 ul {
   margin-left: 1rem;
 }
-
-a{
-  color:#fff;
+section{
+  margin: 3em 0;
 }
 
 p.lead, p.lead > a {
@@ -38,6 +37,7 @@ p.lead, p.lead > a {
 }
 
 a {
+  color:#fff;
   transition: background .5s ease;
   -webkit-transition: background .5s ease;
   padding: 3px 4px;
@@ -45,14 +45,16 @@ a {
   border-radius: 3px;
 }
 
-a:hover:not(.logo) {
+a:hover:not(.logo):not(.active) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 nav > div > div > a {
   text-decoration: none;
 }
+
 .active{
+  cursor: default;
   border-radius: 3px 3px 0 0;
   border-bottom: 1px solid gold;
 }
