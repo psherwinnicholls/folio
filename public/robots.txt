@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://philsn.co.uk/sitemap.xml
-Host: https://philsn.co.uk
