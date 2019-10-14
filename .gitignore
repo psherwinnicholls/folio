@@ -7,6 +7,3 @@ npm-debug.log
 
 # dotenv environment variables file
 .env
-
-# gatsby files
-.cache/

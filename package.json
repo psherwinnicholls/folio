@@ -38,7 +38,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build && cp ./src/CNAME && gh-pages -d public -b master",
+    "deploy": "gatsby build --prefix-paths && cp ./src/CNAME && gh-pages -d public -b master",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
