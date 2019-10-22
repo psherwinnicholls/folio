@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -36,17 +36,14 @@ export default ({ data }) => {
           ))}
         </section>
         <section>
-          <h3>Talks &amp; workshops</h3>
-          <div>
           {data.allMarkdownRemark.edges
-            .filter(({node}) => node.frontmatter.type === 'speaking')
+            .filter(({node}) => node.frontmatter.type === 'coaching')
             .map(( {node} ) => (
               <div
                 key={node.id}
                 dangerouslySetInnerHTML={{ __html: node.html }}>
               </div>
             ))}
-          </div>
         </section>
         <section>
           <h3>Links</h3>
@@ -58,6 +55,13 @@ export default ({ data }) => {
                 dangerouslySetInnerHTML={{ __html: node.html }}>
               </div>
             ))}
+        </section>
+        <section>
+          <h3>Contact</h3>
+          <p><Link to="mailto:hey@philsn.co.uk">hey@philsn.co.uk</Link></p>
+          <p>86-90 Paul St,<br/>London</p>
+          <p>@phils_n</p>
+          <Link></Link>
         </section>
       </Layout>
   );
