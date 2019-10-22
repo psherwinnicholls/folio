@@ -1,11 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet"
+import {Link, graphql } from "gatsby"
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 
-export default () => {
-
+export default ({ data }) => {
   return (
 
       <Layout>
@@ -15,28 +16,48 @@ export default () => {
          </Helmet>
         <SEO title="Coaching" />
         <section style={{marginTop:'4rem'}}>
-          <p>2 day intensive course</p>
-          <h1 style={{marginTop:'-1.25rem'}}>Rapid prototyping </h1>
+          <h1 style={{marginTop:'-1.25rem'}}>Learn &amp; do</h1>
           <p className="lead">
-            Learn to empower yourself and others around you by visualising your ideas as fully functioning prototypes hosted on the internet.
+            Whether you&rsquo;re launching, iterating or researching &mdash; we&rsquo;ll do it together. That way, you get the skills and confidence in the areas that matter.
           </p>
           <p className="lead cta">
-            <a href="mailto:hey@philsn.co.uk">
-              Get in touch
-             for dates &amp; prices</a>
+            <a href="mailto:hey@philsn.co.uk">Get in touch</a>
           </p>
         </section>
-
         <section>
-          <h3>You&rsquo;ll learn how to:</h3>
-          <ul>
-            <li>code in HTML, CSS &amp; Javascript</li>
-            <li>navigate the terminal</li>
-            <li>pull, commit and push to Github</li>
-            <li>host an app on Heroku</li>
-            <li>save time using ninja computer shortcuts</li>
-          </ul>
+          {data.allMarkdownRemark.edges
+            .filter(({node}) => node.frontmatter.type === 'course')
+            .map(({ node }) => (
+              <div key={ node.frontmatter.id }>
+                  <Link to={node.fields.slug}>
+                    { node.frontmatter.title }
+                  </Link>
+                <p> { node.frontmatter.description } </p>
+              </div>
+            ))}
         </section>
+
+
       </Layout>
   );
 };
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            type
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`;

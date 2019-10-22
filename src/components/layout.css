@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=DM+Sans:500|DM+Serif+Display|DM+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:500|DM+Serif+Display|DM+Serif+Text&display=swap');
 
 html, *, not[h1]{
   font-family: 'DM Sans', sans-serif;
@@ -18,7 +18,8 @@ h1, svg > text > textPath {
 }
 
 h2, h3 {
-  font-family: 'DM Serif', serif;
+  font-family: 'DM Serif Text', serif;
+  font-weight: normal;
 }
 
 h3 {
@@ -56,7 +57,7 @@ nav > div > div > a {
 .active{
   cursor: default;
   border-radius: 3px 3px 0 0;
-  border-bottom: 1px solid gold;
+  box-shadow: 0px 1px 0px gold;
 }
 
 .logo > img{
@@ -295,7 +296,6 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
@@ -310,7 +310,6 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
 }
 h4 {

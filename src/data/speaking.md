@@ -1,8 +1,9 @@
 ---
 type: "speaking"
 ---
-- [2 day rapid prototyping intensive course](/coaching)
-- Research sprint followed by a 4 day design sprint for Parity Projects  
+- [Design sprint (4 days)](/courses/design-sprint)
+- [Research sprint (3 days)](/courses/research-sprint)
+- [Rapid prototyping intensive course (2 days)](/courses/rapid-prototyping)
 - 2 day innovation workshops for the European lottery
 - Design accelerator for Fidelity investments  
 - Innovation programmes for ING Europe and Philips

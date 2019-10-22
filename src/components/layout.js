@@ -23,7 +23,8 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => {
+      return (
       <>
         <div
           style={{
@@ -37,7 +38,7 @@ const Layout = ({ children }) => (
           <main>{children}</main>
         </div>
       </>
-    )}
+    )}}
   />
 )
 
