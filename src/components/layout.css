@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=DM+Sans:500|DM+Serif+Display|DM+Serif+Text&display=swap');
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:500|DM+Serif+Display|DM+Serif+Text&display=swap");
 
-html, *, not[h1]{
-  font-family: 'DM Sans', sans-serif;
+html,
+*,
+not[h1] {
+  font-family: "DM Sans", sans-serif;
   font-weight: 300;
   font-size: 22px;
   background-color: #1c1c1b;
@@ -11,36 +13,40 @@ html, *, not[h1]{
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, svg > text > textPath {
+h1,
+svg > text > textPath {
   line-height: 1.2em;
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 3.5em;
 }
 
-h2, h3, h4 {
-  font-family: 'DM Serif Text', serif;
+h2,
+h3,
+h4 {
+  font-family: "DM Serif Text", serif;
   font-weight: normal;
 }
 
 h3 {
-  font-size:2.15em;
+  font-size: 2.15em;
 }
 
 ul {
   margin-left: 1rem;
 }
-section{
+section {
   margin: 3em 0;
 }
 
-p.lead, p.lead > a {
+p.lead,
+p.lead > a {
   font-size: 1.5rem;
 }
 
 a {
-  color:#fff;
-  transition: background .5s ease;
-  -webkit-transition: background .5s ease;
+  color: #fff;
+  transition: background 0.5s ease;
+  -webkit-transition: background 0.5s ease;
   padding: 3px 4px;
   margin: -3px -4px;
   border-radius: 3px;
@@ -54,13 +60,13 @@ nav > div > div > a {
   text-decoration: none;
 }
 
-.active{
+.active {
   cursor: default;
   border-radius: 3px 3px 0 0;
   box-shadow: 0px 1px 0px gold;
 }
 
-.logo > img{
+.logo > img {
   margin: 0;
 }
 
@@ -320,7 +326,7 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
   color: inherit;
   text-rendering: optimizeLegibility;
   font-size: 1.5rem;
@@ -467,7 +473,7 @@ fieldset {
   margin-bottom: 1.45rem;
 }
 blockquote {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 2.5em;
   margin-left: 1.45rem;
   margin-right: 1.45rem;
@@ -479,13 +485,13 @@ blockquote {
   margin-bottom: 1.45rem;
 }
 
-blockquote::before{
-  color:gold;
-  content:"\201C";
+blockquote::before {
+  color: gold;
+  content: "\201C";
 }
-blockquote::after{
-  color:gold;
-  content:"\201d";
+blockquote::after {
+  color: gold;
+  content: "\201d";
 }
 form {
   margin-left: 0;
@@ -674,7 +680,7 @@ li > a {
   flex-wrap: wrap;
 }
 
-.experience > ol > li{
+.experience > ol > li {
   counter-increment: experience;
   width: 50%;
   margin-top: 3rem;
@@ -688,9 +694,9 @@ li > a {
 
 .experience > ol > li::before {
   content: counter(experience);
-  font-family: 'DM Sans', serif;
+  font-family: "DM Sans", serif;
   font-size: 4em;
-  margin-top: -.5rem;
+  margin-top: -0.5rem;
   margin-right: 2rem;
   margin-left: -5rem;
   line-height: 1;
@@ -699,26 +705,54 @@ li > a {
   text-align: right;
 }
 
+@media screen and (max-width: 780px) {
+  .experience > ol > li {
+    width:100%;
+    margin: 3rem 0 3rem auto;
+    padding-left: 4rem;
+  }
+  .experience > ol > li::before {
+    margin-left: -4rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
 
+  .experience > ol {
+    margin-bottom: 3rem;
+  }
 
-@media only screen and (max-width: 480px) {
-  h1{
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
     border-left: 4px solid gold;
     padding-left: 1rem;
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
-   p.lead, p.lead > a  {
-     font-size: 1rem;
+  p.lead,
+  p.lead > a {
+    font-size: 1rem;
   }
 
-  h3{
+  h3 {
     font-size: 1.3em;
   }
 
   ul {
-    margin-left: 1.75rem ;
+    margin-left: 1.75rem;
   }
-  li > a, li > span, li > p, li{
+  li > a,
+  li > span,
+  li > p,
+  li {
     font-size: 1rem;
+  }
+
+  .experience > ol > li {
+    width: 80%;
+  }
+  .experience > ol > li {
+    margin: 3rem auto;
   }
 }
