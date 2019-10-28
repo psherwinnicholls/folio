@@ -20,33 +20,24 @@ export default ({ data }) => {
             Working at the intersection of technology, data and design. Phil works with organisations to  solve wicked, population scale problems.
           </p>
           <p className="lead cta">
-            <a href="mailto:hey@philsn.co.uk">Available for contracts</a>
+            <a href="mailto:hey@philsn.co.uk">Available now</a>
           </p>
         </section>
 
         <section>
-          <h3>Work &amp; clients</h3>
           {data.allMarkdownRemark.edges
           .filter(({node}) => node.frontmatter.type === 'clients')
           .map(( {node} ) => (
             <div
               key={node.id}
+              className="experience"
               dangerouslySetInnerHTML={{ __html: node.html }}>
             </div>
           ))}
         </section>
+
         <section>
-          {data.allMarkdownRemark.edges
-            .filter(({node}) => node.frontmatter.type === 'coaching')
-            .map(( {node} ) => (
-              <div
-                key={node.id}
-                dangerouslySetInnerHTML={{ __html: node.html }}>
-              </div>
-            ))}
-        </section>
-        <section>
-          <h3>Links</h3>
+          <h3>Featured in</h3>
           {data.allMarkdownRemark.edges
             .filter(({node}) => node.frontmatter.type === 'links')
             .map(( {node} ) => (
@@ -56,7 +47,7 @@ export default ({ data }) => {
               </div>
             ))}
         </section>
-        <section>
+        <section style={{marginTop: "8rem"}}>
           <h3>Contact</h3>
           <p><Link to="mailto:hey@philsn.co.uk">hey@philsn.co.uk</Link></p>
           <p>86-90 Paul St,<br/>London</p>

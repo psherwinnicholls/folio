@@ -23,7 +23,7 @@ h2, h3, h4 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size:2.15em;
 }
 
 ul {
@@ -659,6 +659,48 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+.experience > ol {
+  counter-reset: experience;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8rem;
+}
+
+li > a {
+  flex-wrap: wrap;
+}
+
+.experience > ol > li{
+  counter-increment: experience;
+  width: 50%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 4rem;
+}
+
+.experience > ol > li:nth-child(even) {
+  margin-left: auto;
+}
+
+.experience > ol > li::before {
+  content: counter(experience);
+  font-family: 'DM Sans', serif;
+  font-size: 4em;
+  margin-top: -.5rem;
+  margin-right: 2rem;
+  margin-left: -5rem;
+  line-height: 1;
+  display: block;
+  position: absolute;
+  text-align: right;
+}
+
+
+
 @media only screen and (max-width: 480px) {
   h1{
     border-left: 4px solid gold;
