@@ -47,7 +47,7 @@ export default ({ data }) => {
               </div>
             ))}
         </section>
-        <section style={{marginTop: "8rem"}}>
+        <section style={{marginTop: "6rem"}}>
           <h3>Contact</h3>
           <p><Link to="mailto:hey@philsn.co.uk">hey@philsn.co.uk</Link></p>
           <p>86-90 Paul St,<br/>London</p>

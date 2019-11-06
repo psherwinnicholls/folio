@@ -1,0 +1,5 @@
+---
+type: "sidesalad"
+---
+
+# write haiku

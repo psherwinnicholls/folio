@@ -708,7 +708,7 @@ li > a {
 @media screen and (max-width: 780px) {
   .experience > ol > li {
     width:100%;
-    margin: 3rem 0 3rem auto;
+    margin: 3rem auto 3rem auto;
     padding-left: 4rem;
   }
   .experience > ol > li::before {
@@ -750,9 +750,9 @@ li > a {
   }
 
   .experience > ol > li {
-    width: 80%;
+    width: 100%;
   }
   .experience > ol > li {
-    margin: 3rem auto;
+    margin: 2rem 0;
   }
 }
