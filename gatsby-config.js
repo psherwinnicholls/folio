@@ -17,7 +17,12 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-favicon`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-smartypants`],
+      },
+    },
     `gatsby-plugin-styled-components`,
     // `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

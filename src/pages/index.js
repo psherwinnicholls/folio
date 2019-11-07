@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet"
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import { Box } from "grommet";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -12,7 +13,7 @@ export default ({ data }) => {
            <title>Phil Sherwin-Nicholls | Service designer & digital technologist</title>
            <link rel="canonical" href="https://philsn.co.uk" />
          </Helmet>
-        <SEO title="Home" />
+        <SEO title="Phil Sherwin-Nicholls" />
         <section>
           <h1>Phil Sherwin-Nicholls&#59;<br/> a service designer<br/>&amp; digital technologist.</h1>
           <p className="lead">
@@ -36,6 +37,33 @@ export default ({ data }) => {
         </section>
 
         <section>
+          <h3>Side projects:</h3>
+          <Box
+            direction="row"
+            align="start"
+            wrap
+            >
+                {data.allMarkdownRemark.edges
+                  .filter(({ node }) => node.frontmatter.type === 'project')
+                  .map(( {node}, i ) => (
+                    <Box
+                      className="project"
+                      key={node.id}
+                      pad={{
+                        "top": "medium",
+                        "right": "medium"
+                      }}
+                      responsive>
+                      <p>
+                        <a target="_blank" rel="noopener noreferrer"  href={node.frontmatter.link}>{node.frontmatter.title}</a><br/>
+                        {node.frontmatter.description}
+                      </p>
+                    </Box>
+                ))}
+          </Box>
+        </section>
+
+        <section>
           <h3>Featured in:</h3>
           {data.allMarkdownRemark.edges
             .filter(({node}) => node.frontmatter.type === 'links')
@@ -47,9 +75,10 @@ export default ({ data }) => {
             ))}
         </section>
         <section style={{marginTop: "6rem"}}>
-          <h3>Contact</h3>
+          <h3>Contact:</h3>
           <ul><li><a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">hey@philsn.co.uk</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/philsn">LinkedIn</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/psherwinnicholls/">GitHub</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0].publicURL}>View CV</a> (.pdf)</li>
           </ul>
         </section>
@@ -66,6 +95,9 @@ export const query = graphql`
           html
           frontmatter {
             type
+            title
+            link
+            description
           }
         }
       }

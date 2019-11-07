@@ -705,6 +705,10 @@ li > a {
   text-align: right;
 }
 
+.project{
+  flex-basis: 50%;
+}
+
 @media screen and (max-width: 780px) {
   .experience > ol > li {
     width:100%;
@@ -721,7 +725,9 @@ li > a {
   .experience > ol {
     margin-bottom: 3rem;
   }
-
+  .project{
+    flex-basis: 50%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -745,7 +751,7 @@ li > a {
   li > a,
   li > span,
   li > p,
-  li {
+  li, p, p>a {
     font-size: 1rem;
   }
 
@@ -754,5 +760,8 @@ li > a {
   }
   .experience > ol > li {
     margin: 2rem 0;
+  }
+  .project{
+    flex-basis: 100%;
   }
 }
