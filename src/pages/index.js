@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 export default ({ data }) => {
-
+  console.log(data)
   return (
       <Layout>
         <Helmet>
@@ -20,7 +20,7 @@ export default ({ data }) => {
             Working at the intersection of technology, data and design. Phil works with organisations to  solve wicked, population scale problems.
           </p>
           <p className="lead cta">
-            <a href="mailto:hey@philsn.co.uk">Available now</a>
+            <a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">Available from mid-February.</a>
           </p>
         </section>
 
@@ -37,7 +37,7 @@ export default ({ data }) => {
         </section>
 
         <section>
-          <h3>Featured in</h3>
+          <h3>Featured in:</h3>
           {data.allMarkdownRemark.edges
             .filter(({node}) => node.frontmatter.type === 'links')
             .map(( {node} ) => (
@@ -49,10 +49,10 @@ export default ({ data }) => {
         </section>
         <section style={{marginTop: "6rem"}}>
           <h3>Contact</h3>
-          <p><Link to="mailto:hey@philsn.co.uk">hey@philsn.co.uk</Link></p>
-          <p>86-90 Paul St,<br/>London</p>
-          <p>@phils_n</p>
-          <Link></Link>
+          <ul><li><a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">hey@philsn.co.uk</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/philsn">LinkedIn</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0].publicURL}>Download CV</a> (.pdf)</li>
+          </ul>
         </section>
       </Layout>
   );
@@ -69,6 +69,11 @@ export const query = graphql`
             type
           }
         }
+      }
+    }
+    allFile(filter: { extension: { eq: "pdf" } }) {
+      nodes {
+        publicURL
       }
     }
   }
