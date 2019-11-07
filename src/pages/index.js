@@ -16,10 +16,10 @@ export default ({ data }) => {
         <section>
           <h1>Phil Sherwin-Nicholls&#59;<br/> a service designer<br/>&amp; digital technologist.</h1>
           <p className="lead">
-            Working at the intersection of technology, data and design. Phil works with organisations to  solve wicked, population scale problems.
+            Working at the intersection of technology, data and design &mdash; Phil has over 5 years experience helping organisations and governments to solve wicked, population scale problems.
           </p>
           <p className="lead cta">
-            <a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">Available from mid-February.</a>
+            <a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">Available from mid-February</a>
           </p>
         </section>
 
@@ -50,7 +50,7 @@ export default ({ data }) => {
           <h3>Contact</h3>
           <ul><li><a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">hey@philsn.co.uk</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/philsn">LinkedIn</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0].publicURL}>Download CV</a> (.pdf)</li>
+          <li><a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0].publicURL}>View CV</a> (.pdf)</li>
           </ul>
         </section>
       </Layout>
