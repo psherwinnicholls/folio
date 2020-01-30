@@ -26,7 +26,7 @@ export default ({ data }) => {
 
         <section>
           {data.allMarkdownRemark.edges
-          .filter(({node}) => node.frontmatter.type === 'clients')
+          .filter(({node}) => node.frontmatter.type === 'experience')
           .map(( {node} ) => (
             <div
               key={node.id}
@@ -35,7 +35,23 @@ export default ({ data }) => {
             </div>
           ))}
         </section>
-
+        <section>
+          <blockquote>We love you, we would literally sacrifice any of our existing [team] to have you on the project 😂</blockquote>
+          <blockquote>Phil has an incredible ability to understand our business needs in an incredibly short period of time.</blockquote>
+          <blockquote></blockquote>
+          <blockquote></blockquote>
+        </section>
+        <section>
+          {data.allMarkdownRemark.edges
+          .filter(({node}) => node.frontmatter.type === 'clients')
+          .map(( {node} ) => (
+            <div
+              key={node.id}
+              className="clients"
+              dangerouslySetInnerHTML={{ __html: node.html }}>
+            </div>
+          ))}
+        </section>
         <section>
           <h3>Side projects:</h3>
           <Box
@@ -74,7 +90,7 @@ export default ({ data }) => {
               </div>
             ))}
         </section>
-        <section style={{marginTop: "6rem"}}>
+        <section>
           <h3>Contact:</h3>
           <ul><li><a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">hey@philsn.co.uk</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/philsn">LinkedIn</a></li>

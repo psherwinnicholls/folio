@@ -35,7 +35,7 @@ ul {
   margin-left: 1rem;
 }
 section {
-  margin: 3em 0;
+  margin: 3.5em 0;
 }
 
 p.lead,
@@ -474,8 +474,9 @@ fieldset {
 }
 blockquote {
   font-family: "DM Serif Display", serif;
-  font-size: 2.5em;
+  font-size: 1.65em;
   margin-left: 1.45rem;
+  font-size: 1.65em;
   margin-right: 1.45rem;
   margin-top: 0;
   padding-bottom: 0;
@@ -673,7 +674,6 @@ pre tt:after {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 8rem;
 }
 
 li > a {
@@ -703,6 +703,15 @@ li > a {
   display: block;
   position: absolute;
   text-align: right;
+}
+.clients {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.clients > p {
+    margin-bottom: 2em;
+    margin-right: 1.3em;
 }
 
 .project{
@@ -754,7 +763,9 @@ li > a {
   li, p, p>a {
     font-size: 1rem;
   }
-
+  section {
+    margin: 2em 0;
+  }
   .experience > ol > li {
     width: 100%;
   }
