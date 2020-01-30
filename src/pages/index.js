@@ -20,7 +20,7 @@ export default ({ data }) => {
             Working at the intersection of technology, data and design &mdash; Phil has over 5 years experience helping organisations and governments to solve wicked, population scale problems.
           </p>
           <p className="lead cta">
-            <a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">Available from mid-February</a>
+            <a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">Available from May onwards</a>
           </p>
         </section>
 
@@ -36,10 +36,8 @@ export default ({ data }) => {
           ))}
         </section>
         <section>
-          <blockquote>We love you, we would literally sacrifice any of our existing [team] to have you on the project 😂</blockquote>
-          <blockquote>Phil has an incredible ability to understand our business needs in an incredibly short period of time.</blockquote>
-          <blockquote></blockquote>
-          <blockquote></blockquote>
+          <blockquote>Phil has this incredible ability to understand our business needs in an incredibly short period of time</blockquote>
+
         </section>
         <section>
           {data.allMarkdownRemark.edges
@@ -53,6 +51,9 @@ export default ({ data }) => {
           ))}
         </section>
         <section>
+                  <blockquote>We love you, we would literally sacrifice any of our existing team to have you on the project</blockquote>
+                  <section/>
+
           <h3>Side projects:</h3>
           <Box
             direction="row"

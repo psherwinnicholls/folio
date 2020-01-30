@@ -475,15 +475,15 @@ fieldset {
 blockquote {
   font-family: "DM Serif Display", serif;
   font-size: 1.65em;
-  margin-left: 1.45rem;
-  font-size: 1.65em;
-  margin-right: 1.45rem;
-  margin-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 2em;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  padding-top: 1em;
+  margin-left: 1.45rem;
+  margin-bottom: 4rem;
+  margin-right: 1.45rem;
+  margin-top: 3rem;
+  text-align: center;
 }
 
 blockquote::before {
@@ -706,7 +706,7 @@ li > a {
 }
 .clients {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .clients > p {
