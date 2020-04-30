@@ -2,10 +2,9 @@
 const preferDefault = m => m && m.default || m
 
 exports.components = {
-  "component---cache-dev-404-page-js": () => import("/Users/phil/dev/sites/folio/.cache/dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
-  "component---src-pages-404-js": () => import("/Users/phil/dev/sites/folio/src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
-  "component---src-pages-index-js": () => import("/Users/phil/dev/sites/folio/src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */)
+  "component---cache-dev-404-page-js": () => import("./dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
+  "component---src-pages-404-js": () => import("./../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
+  "component---src-pages-blog-jsx": () => import("./../src/pages/blog.jsx" /* webpackChunkName: "component---src-pages-blog-jsx" */),
+  "component---src-pages-index-jsx": () => import("./../src/pages/index.jsx" /* webpackChunkName: "component---src-pages-index-jsx" */)
 }
-
-exports.data = () => import(/* webpackChunkName: "pages-manifest" */ "/Users/phil/dev/sites/folio/.cache/data.json")
 

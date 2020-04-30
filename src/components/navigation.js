@@ -15,7 +15,13 @@ export default () => (
         <Link className="logo" to="/">
           <img src={logoUrl} alt="Phil's logo" />
         </Link>
-      
+        <Box
+          align="center"
+          justify="between"
+          gap="medium"
+          direction="row">
+            <Link to="blog">Writing</Link><Link to="blog">Contact</Link>
+        </Box>
       </Box>
     </nav>
   </header>
