@@ -12,9 +12,19 @@ function Subscribe() {
   const [ directMailChecked, setDirectMailChecked] = useState(true);
 
   return (
-    <div id="mc_embed_signup">
-      <h3>Subscribe for new content</h3>
-      <p>Get updates when I occasionaly publish a new post.</p>
+    <Box
+    background="light-2"
+      border={{
+        "color": "light-2",
+        "size": "small",
+        "side": "all"
+      }}
+      pad={{
+        "vertical":"large",
+        "horizontal":"medium"}}
+      id="mc_embed_signup">
+
+      <h4 style={{"marginTop": "0"}}>Subscribe for new content</h4>
       <form
         action="https://philsn.us8.list-manage.com/subscribe/post?u=e793e0f6e2b2426485dd72877&amp;id=ddb6f073dc"
         method="post"
@@ -29,7 +39,6 @@ function Subscribe() {
             <label htmlFor="mce-EMAIL">Email Address</label>
             <TextInput
               label="Email Address"
-              placeholder="type here"
               name="EMAIL"
               className="required email"
               id="mce-EMAIL"
@@ -43,7 +52,7 @@ function Subscribe() {
             className="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group"
           >
             <div className="content__gdpr">
-              <Box direction="column" margin={{"top":"large"}}>
+              <Box direction="column" margin={{"top":"medium"}}>
                 <fieldset
                   className="mc_fieldset gdprRequired mc-field-group"
                   name="interestgroup_field"
@@ -119,7 +128,7 @@ function Subscribe() {
           </div>
         </div>
       </form>
-    </div>
+    </Box>
   );
 }
 

@@ -4,7 +4,7 @@ import { Box } from "grommet";
 import logoUrl from "../images/logo.svg";
 
 export default () => (
-  <header style={{ marginBottom: "6em" }}>
+  <header style={{ marginBottom: "4em" }}>
     <nav>
       <Box
         margin={{ top: "medium" }}
@@ -20,7 +20,8 @@ export default () => (
           justify="between"
           gap="medium"
           direction="row">
-            <Link to="blog">Writing</Link><Link to="blog">Contact</Link>
+            <Link activeClassName="active" to="writing">Writing</Link>
+            <Link activeClassName="active" to="contact">Contact me</Link>
         </Box>
       </Box>
     </nav>

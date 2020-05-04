@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { graphql } from "gatsby";
-import { Box } from "grommet";
+import { graphql, Link } from "gatsby";
+import { Box, Text } from "grommet";
 
 import Layout from "../components/layout";
 import Subscribe from "../components/subscribe";
@@ -9,6 +9,8 @@ import Nav from "../components/navigation";
 import SEO from "../components/seo";
 
 export default ({ data }) => {
+  const post = data.markdownRemark;
+  console.log(post.frontmatter.title)
   return (
     <Layout>
       <Helmet>
@@ -21,35 +23,27 @@ export default ({ data }) => {
       <Nav />
 
       <section>
-        {data.allMarkdownRemark.edges
-          .filter(({ node }) => node.frontmatter.type === "writing")
-          .map(({ node }) => (
-            <div
-              key={node.id}
-              dangerouslySetInnerHTML={{ __html: node.html }}
-            />
-          ))}
+        <Link to="/writing">Writing</Link> ↴
+        <h3 style={{"marginTop":"0.1em", "marginBottom":"0.2em"}}>{post.frontmatter.title}</h3>
+        <Text>{post.frontmatter.date}</Text>
+        <Box
+          margin={{ top: "large" }}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </section>
-      <Subscribe/>
 
+      <Subscribe />
     </Layout>
   );
 };
+
 export const query = graphql`
-  query {
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            type
-            title
-            link
-            description
-          }
-        }
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        date(formatString: "DD MMMM, YYYY")
       }
     }
   }
