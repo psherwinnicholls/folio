@@ -10,7 +10,6 @@ import SEO from "../components/seo";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
-  console.log(post.frontmatter.title)
   return (
     <Layout>
       <Helmet>
@@ -23,11 +22,12 @@ export default ({ data }) => {
       <Nav />
 
       <section>
-        <Link to="/writing">Writing</Link> ↴
-        <h3 style={{"marginTop":"0.1em", "marginBottom":"0.2em"}}>{post.frontmatter.title}</h3>
+        <Link to="/writing">Writing</Link>&ensp;&#8628;
+        <h1 style={{"marginTop":"0.1em", "marginBottom":"0.2em"}}>{post.frontmatter.title}</h1>
         <Text>{post.frontmatter.date}</Text>
         <Box
           margin={{ top: "large" }}
+          justify="start"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </section>

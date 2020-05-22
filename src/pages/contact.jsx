@@ -1,10 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
-import { Box, Text } from "grommet";
+import { Box } from "grommet";
 
 import Layout from "../components/layout";
-import Subscribe from "../components/subscribe";
 import Nav from "../components/navigation";
 import SEO from "../components/seo";
 

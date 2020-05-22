@@ -17,15 +17,27 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-favicon`,
     `gatsby-plugin-robots-txt`,
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-smartypants`],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 650,
+              loading: `lazy`,
+              linkImagesToOriginal: `false`
+            },
+          },
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-copy-linked-files`,
+        ],
       },
     },
     `gatsby-plugin-styled-components`,
-    // `gatsby-transformer-sharp`,
-    // `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
     // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-svgr`,

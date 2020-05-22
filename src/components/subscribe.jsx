@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { Box, Button, CheckBox, Form, FormField, TextInput } from "grommet";
+import { Box, CheckBox, TextInput } from "grommet";
 
 function Subscribe() {
   const [
@@ -90,7 +90,7 @@ function Subscribe() {
             </div>
             <div className="content__gdprLegal">
               <p>
-              We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/" target="_blank">Learn more about Mailchimp's privacy practices here.</a>
+              We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/" target="_blank" rel="noopener noreferrer">Learn more about Mailchimp's privacy practices here.</a>
               </p>
             </div>
           </div>
