@@ -32,7 +32,6 @@ export default ({ data }) => {
         />
       </section>
 
-      <Subscribe />
     </Layout>
   );
 };

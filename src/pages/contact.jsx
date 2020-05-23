@@ -25,10 +25,7 @@ export default () => {
             from you
           </p>
           <p>
-            Send me an email at{" "}
-            <a href="mailto:hey@philsn.co.uk">hey@philsn.co.uk</a>.
-          </p>
-          <p> or connect with me on:</p>
+            Send me an email at <a href="mailto:hey@philsn.co.uk">hey@philsn.co.uk</a> or connect on:</p>
           <ul>
             <li>
               <a href="https://www.linkedIn.com/philsn">LinkedIn</a>

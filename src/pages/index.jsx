@@ -37,7 +37,7 @@ export default ({ data }) => {
             rel="noopener noreferrer"
             href="mailto:hey@philsn.co.uk"
           >
-            Available from May onwards
+            Available from mid-July 
           </a>
         </p>
       </section>
