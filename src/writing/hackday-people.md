@@ -5,21 +5,19 @@ series: hackday
 date: "2020-05-04"
 ---
 
-This post is a part of a series that will go deep on [How to design, run and get buy-in for hackdays](/writing/hackday).
 
 The best teams are the ones with a diverse group of people and cultures. That's where you get the most value. Challenging intelligent people to solve cross disciplinary problems forces them to come up with new ways of thinking.
 
-### Musts
-The people closest to you on your stakeholder blueprint.
+Make a list of all of your stakeholders. It might look something like this:
 
 - your immediate team
+- line managers
 - users
-- stakeholders
-- experts — you can’t always get a full day of their time as they may not be a part of your organisation. Ask them to prepare a 10 minute recording of an area of their knowledge.
+- experts
+- your users
+- people who interact with your users e.g. customer support
+- senior management
+- founders
+- C-suite
 
-### Shoulds
-- stakeholders
-
-### Coulds
-
-### Won'ts
+Sort them into people you must, should, could and won't invite. This will give you a bunch of back-ups if people can't make the date.

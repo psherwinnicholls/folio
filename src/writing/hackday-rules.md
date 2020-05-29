@@ -5,7 +5,6 @@ series: hackday
 date: "2020-05-04"
 ---
 
-
 For healthy workshops:
 
  1. No question is a stupid question

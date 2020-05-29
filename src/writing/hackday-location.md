@@ -5,9 +5,9 @@ series: hackday
 date: "2020-05-04"
 ---
 
-This post is a part of a series that will go deep on [How to design, run and get buy-in for hackdays](/writing/hackday).
+You'll need a flexible space to call home for the day so you can move between workshops, presentations and games.
 
-You'll need a space to call home for the day. Hire a venue if you need to. You will be running workshops, presentations and games so it needs to be flexible. The value of getting these people in a room for a day without distractions is worth it.
+The value of getting a room for a day without distractions is totally worth it—hire a venue if you need to.
 
 You should find a space that:
 

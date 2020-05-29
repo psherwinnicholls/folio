@@ -53,6 +53,8 @@ Welcome everyone individually, remember names and show them around.
 
 
 ### 09:30–11:00 — Know the problem space
+Split the room into teams of 3–4. This will give you the flexibility to brief each team individually. Recently, I grouped industry experts from the same field into teams alongside product owners, interaction/service designers and developers. These teams played to their strengths and tackled different parts of a complex problem space.
+
 Choose workshops that will get your attendees on the same page. Assume they are seeing this for the first time. And do the hard work for them so that you don't burn time.
 
 Here you could:
@@ -60,7 +62,6 @@ Here you could:
 - create/review your risky assumptions, or
 - build a research wall
 
-Split the room into teams of 3–4. This will give you the flexibility to brief each team individually. Recently, I grouped industry experts from the same field into teams alongside product owners, interaction/service designers and developers. These teams played to their strengths and tackled different parts of a complex problem space.
 
 ### 11:00–11:15 — Take a short break
 It might seem early. And I've literally had people scoff at me. People are normally only useful for about 1½ hours before they should take a break. The day is perfectly timed for that.

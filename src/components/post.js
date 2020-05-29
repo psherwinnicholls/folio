@@ -10,6 +10,7 @@ import SEO from "../components/seo";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
+  let re = post.html.replace(/<input type="checkbox" disabled>/g,'<input type="checkbox">');
   return (
     <Layout>
       <Helmet>
@@ -24,11 +25,10 @@ export default ({ data }) => {
       <section>
         <Link to="/writing">Writing</Link>&ensp;&#8628;
         <h1 style={{"marginTop":"0.1em", "marginBottom":"0.2em"}}>{post.frontmatter.title}</h1>
-        <Text>{post.frontmatter.date}</Text>
         <Box
           margin={{ top: "large" }}
           justify="start"
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          dangerouslySetInnerHTML={{ __html: re }}
         />
       </section>
 

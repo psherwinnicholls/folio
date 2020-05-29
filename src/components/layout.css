@@ -321,6 +321,16 @@ h3 {
   color: inherit;
   text-rendering: optimizeLegibility;
 }
+.task-list-item{
+  list-style-type: none;
+}
+
+.task-list-item > input[type="checkbox"]{
+  position: absolute;
+  transform: translate(-1.5em, 0.1em);
+  width: 1em;
+  height: 1em;
+}
 h4 {
   margin-left: 0;
   margin-right: 0;
