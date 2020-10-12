@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 export default ({ data }) => {
+    console.log('hello')
   return (
       <Layout>
         <Helmet>
@@ -20,7 +21,7 @@ export default ({ data }) => {
             Working at the intersection of technology, data and design &mdash; Phil has over 5 years experience helping organisations and governments to solve wicked, population scale problems.
           </p>
           <p className="lead cta">
-            <a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">Available from May onwards</a>
+            <a target="_blank" rel="noopener noreferrer" href="mailto:hey@philsn.co.uk">Available now</a>
           </p>
         </section>
 
